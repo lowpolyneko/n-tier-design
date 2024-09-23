@@ -159,7 +159,7 @@ def get_stops(dbConn, name):
         SELECT Stop_ID, Stop_Name, Direction, ADA, Latitude, Longitude
         FROM Stops
         WHERE Station_ID = ?
-        ORDER BY Stop_ID
+        ORDER BY Stop_Name, Stop_ID
     """, [station_id])
 
     results = []
