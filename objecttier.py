@@ -126,7 +126,7 @@ def get_stations(dbConn, pattern):
 
     results = []
     for Station_Name, Station_ID, Num_Riders in entries:
-        results.append(Station(Station_Name, Station_ID, Num_Riders, 100*Num_Riders/total))
+        results.append(Station(Station_ID, Station_Name, Num_Riders, 100*Num_Riders/total))
 
     return results
 
