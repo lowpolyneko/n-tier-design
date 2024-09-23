@@ -117,9 +117,6 @@ def get_stations(dbConn, pattern):
         ORDER BY Station_Name
     """)
 
-    if not entries:
-        return None
-
     total, = datatier.select_one_row(dbConn, """
         SELECT SUM(Num_Riders) FROM Ridership
     """)
